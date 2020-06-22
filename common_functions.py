@@ -66,3 +66,10 @@ def apodization(size, threshold, fvector, angles):
         
     return ADF_s
 
+def matrix_scale(matrixA, matrixB, matrixC):
+    maxA = np.amax(np.ravel(matrixA))
+    maxB = np.amax(np.ravel(matrixB))
+    maxC = np.amax(np.ravel(matrixC))
+    
+    return np.amax(np.array([maxA, maxB, maxC]))
+
